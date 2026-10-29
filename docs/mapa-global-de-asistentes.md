@@ -44,6 +44,12 @@ Las incidencias incluyen, entre otras, una posible carrera durante el arranque. 
 
 Un tutorial de septiembre de 2026 anuncia voz en tiempo real, memoria persistente, wake word y control de PC. Eso documenta qué se presenta al público, no que cada función sea robusta o reproducible.
 
+## Auditoría de seguridad y fiabilidad
+
+La revisión ampliada de OpenClaw, Hermes Agent, Goose y Jan se encuentra en [Auditoría profunda de seguridad y fiabilidad](auditoria-profunda-seguridad-fiabilidad.md). Incluye fuentes oficiales, reportes de memoria y herramientas, riesgos de MCP, prompt injection, permisos, y una lista de pruebas que todavía falta ejecutar.
+
+Nota adicional sobre Jan: la documentación distingue Jan Desktop de Jan Agent (preview); los almacenes de memoria y espacios de trabajo pueden ser independientes por defecto. La configuración local no garantiza que un proveedor remoto no reciba mensajes cuando se selecciona un modelo en la nube.
+
 ## Vacíos
 
 Aún no se inspeccionaron todos los repositorios del tema GitHub ni todos los videos y comentarios. Instagram y otras redes pueden restringir contenido. No se realizó una prueba práctica conjunta en hardware equivalente y no se infieren sistemas internos a partir de clips promocionales.
