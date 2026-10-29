@@ -47,7 +47,7 @@ Reportes públicos consultados:
 
 Estos reportes son evidencia de problemas de usuarios en esa versión/entorno, no una tasa estadística de fallos.
 
-### Mejoras recomendadas para M.I.L.O.
+### Mejoras recomendadas para un asistente propio
 
 1. Instalar dependencias según sistema operativo y separar extras opcionales.
 2. Probar audio antes de abrir la sesión conversacional.
@@ -92,7 +92,7 @@ Mark LVI mantiene la idea de asistente de escritorio, pero el README muestra un 
 
 ## 4. Trayectoria resumida
 
-| Etapa | Enfoque declarado | Principal aprendizaje para M.I.L.O. |
+| Etapa | Enfoque declarado | Principal aprendizaje para un asistente propio |
 |---|---|---|
 | Mark X / X.1 | Voz, intención → acción, apps, mensajes, web, clima y memoria | Empezar con acciones concretas y contratos simples |
 | Mark XXXIX-OR | Voz Live, visión, archivos, tareas multi-paso y OpenRouter | Separar conversación de operaciones auxiliares y ampliar capacidades de forma modular |
