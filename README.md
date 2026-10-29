@@ -15,6 +15,7 @@ La investigación anterior se centraba demasiado en dos creadores. Esa selecció
 - [YouTube, redes sociales y demostraciones públicas](docs/youtube-redes-y-demostraciones.md)
 - [Por qué la mayoría de los proyectos no se vuelven famosos](docs/por-que-no-se-vuelven-famosos.md)
 - [Errores, límites, preguntas frecuentes y comunidad](docs/fallos-faq-y-comunidad.md)
+- [Auditoría profunda de seguridad y fiabilidad](docs/auditoria-profunda-seguridad-fiabilidad.md)
 - [FatihMakes: serie MARK](docs/fatihmakes-mark-lvi.md)
 - [Evolución de MARK](docs/evolucion-serie-mark.md)
 - [Danny el Arquitecto: producto público y límites de verificación](docs/danny-el-arquitecto.md)
@@ -24,6 +25,7 @@ La investigación anterior se centraba demasiado en dos creadores. Esa selecció
 
 - Se añadieron OpenClaw, Hermes Agent, Goose y Jan al inventario global.
 - Se documentaron reportes recientes de OpenJarvis sobre memoria desactualizada, permisos de audio, dependencias de voz y herramientas.
+- Se añadió una auditoría documental de seguridad y fiabilidad de OpenClaw, Hermes Agent, Goose y Jan, con issues concretos, controles declarados y un protocolo de pruebas futuras.
 - Se creó un análisis con fuentes sobre las barreras de popularidad: valor poco claro, fiabilidad, instalación, privacidad, diferenciación, mantenimiento y distribución.
 - No se asigna un nuevo porcentaje global todavía: falta auditar una muestra más amplia de proyectos y redes, y no se han hecho pruebas reproducibles en máquinas limpias.
 
