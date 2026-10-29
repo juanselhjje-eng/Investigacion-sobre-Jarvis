@@ -17,6 +17,9 @@ La investigación anterior se centraba demasiado en dos creadores. Esa selecció
 - [Errores, límites, preguntas frecuentes y comunidad](docs/fallos-faq-y-comunidad.md)
 - [Auditoría profunda de seguridad y fiabilidad](docs/auditoria-profunda-seguridad-fiabilidad.md)
 - [Asistentes de voz, domótica y local-first](docs/asistentes-de-voz-domotica-y-local-first.md)
+- [Modelos gratuitos frente a pago y coste real](docs/modelos-gratuitos-vs-pago-coste-real.md)
+- [Investigación de UI, HUD y paneles de control](docs/ui-hud-y-paneles-de-control.md)
+- [Catálogo de herramientas y capacidades](docs/catalogo-herramientas-y-capacidades.md)
 - [FatihMakes: serie MARK](docs/fatihmakes-mark-lvi.md)
 - [Evolución de MARK](docs/evolucion-serie-mark.md)
 - [Danny el Arquitecto: producto público y límites de verificación](docs/danny-el-arquitecto.md)
@@ -29,6 +32,9 @@ La investigación anterior se centraba demasiado en dos creadores. Esa selecció
 - Se añadió una auditoría documental de seguridad y fiabilidad de OpenClaw, Hermes Agent, Goose y Jan, con issues concretos, controles declarados y un protocolo de pruebas futuras.
 - Se amplió el inventario a asistentes de voz y domótica: Home Assistant Assist, OpenVoiceOS, Rhasspy y Willow, diferenciando agentes generales, pipelines de voz y satélites.
 - Se creó un análisis con fuentes sobre las barreras de popularidad: valor poco claro, fiabilidad, instalación, privacidad, diferenciación, mantenimiento y distribución.
+- Se añadió una comparación de modelos gratuitos, APIs de pago y ejecución local, incluyendo cuotas, costes ocultos y fórmulas de gasto.
+- Se añadió un estudio de patrones UI/HUD, tecnologías Electron/Tauri y controles de seguridad de escritorio.
+- Se creó un catálogo de herramientas desde navegador, archivos y voz hasta memoria, MCP, subagentes y verificación de acciones.
 - No se asigna un nuevo porcentaje global todavía: falta auditar una muestra más amplia de proyectos y redes, y no se han hecho pruebas reproducibles en máquinas limpias.
 
 ## Evidencia
