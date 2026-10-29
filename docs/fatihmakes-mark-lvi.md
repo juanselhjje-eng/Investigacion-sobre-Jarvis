@@ -211,3 +211,69 @@ El `requirements.txt` incluye UI/audio, Gemini, solicitudes HTTP, Playwright, au
 ### Licencia
 
 El archivo `LICENSE` de Mark LVI indica Creative Commons Attribution-NonCommercial 4.0 International (CC BY-NC 4.0), copyright 2026 FatihMakes, y declara que el uso comercial no está permitido bajo esa licencia. Antes de incorporar código o distribuir un derivado hay que revisar el texto íntegro, atribuir correctamente y solicitar permiso/licencia comercial si corresponde. Que el repositorio sea público no significa que el código sea de dominio público.
+
+
+## 12. Automatización, visión y herramientas: segunda pasada de código
+
+### Navegador
+
+El módulo `actions/browser_control.py` declara automatización con Playwright y busca evitar que la herramienta se ofrezca si la dependencia no está instalada. Es importante porque una capacidad no disponible debe desaparecer del registro de herramientas o devolver un error claro, en lugar de fingir que se navegó.
+
+**Limitaciones que deben probarse:** sitios que cambian su estructura, autenticación multifactor, ventanas emergentes, sesiones caducadas, CAPTCHAs, descargas, formularios de pago y páginas con contenido malicioso. Para M.I.L.O., la navegación debe tener límites de dominio/acción y pedir confirmación antes de enviar, comprar, publicar o borrar.
+
+### Visión de pantalla y cámara
+
+`actions/screen_processor.py` ofrece puntos de entrada separados para capturar pantalla y cámara, comprimir imágenes y enviarlas al contexto principal de Gemini Live. El código trata OpenCV como dependencia de carga diferida para no pagar su coste de importación si no se usa la cámara.
+
+**Limitaciones:** una imagen puede estar desactualizada, no mostrar ventanas minimizadas/otros monitores o contener información privada. El modelo puede interpretar mal el contenido. Recomendación: adjuntar fecha/hora de captura, pantalla seleccionada y fuente; permitir vista previa; no mandar cámara o escritorio al proveedor sin una indicación clara.
+
+### Archivos y documentos
+
+`actions/file_processor.py` anuncia operaciones para imágenes, PDF, DOCX, texto/Markdown, CSV/XLSX, JSON, código, audio, vídeo, ZIP y presentaciones. Es una superficie de riesgo amplia: leer, transformar o ejecutar código requiere controles distintos.
+
+Recomendaciones para M.I.L.O.:
+- Separar lectura/análisis de escritura y ejecución.
+- Crear copias temporales y copias de seguridad antes de sobrescribir.
+- Validar extensiones y contenido real; limitar tamaño, profundidad de ZIP y rutas extraídas.
+- Ejecutar código solo en un entorno aislado, con límites de tiempo y sin secretos.
+- Tratar instrucciones dentro de documentos como datos no confiables, no como órdenes del sistema.
+
+### Mensajería y control del sistema
+
+Los módulos `actions/send_message.py`, `actions/computer_control.py` y `actions/computer_settings.py` implementan interacciones con teclado, portapapeles, aplicaciones y configuración del sistema. El código activa el modo de seguridad de PyAutoGUI en varios de esos caminos y utiliza mecanismos de confirmación y deshacer para algunas acciones.
+
+**Riesgo principal:** el foco puede cambiar entre la comprobación y la escritura; una acción destinada a una ventana puede acabar en otra aplicación. Para M.I.L.O., verificar título/identidad de ventana justo antes de escribir, mostrar el texto final antes de enviarlo y confirmar explícitamente mensajes externos.
+
+### Búsqueda y comportamiento proactivo
+
+`actions/web_search.py` documenta una alternativa de búsqueda cuando Gemini Grounding supera cuota, con un periodo de enfriamiento de 15 minutos. `actions/proactive.py` separa cuándo hablar del contenido que el modelo genera; por defecto, contempla 15 minutos de silencio mínimo y 20 minutos entre avisos proactivos.
+
+**Límites:** resultados de búsqueda pueden estar desactualizados o ser incorrectos; las alertas proactivas pueden resultar intrusivas si no hay controles. M.I.L.O. debe mostrar fuentes y fecha, permitir apagar proactividad por categoría y nunca enviar mensajes externos de forma proactiva sin autorización.
+
+### Proveedores intercambiables
+
+`providers/base.py` define un contrato común para motores de conversación, modelos de texto, STT y TTS. `providers/engine_pipeline.py` combina reconocimiento, LLM y síntesis para imitar el contrato de eventos que consume el núcleo.
+
+El propio código documenta una compensación importante: Gemini Live integra voz y turnos en una sola sesión y puede responder en torno a 0,3–0,6 s según las mediciones que declara el autor; una cadena STT → LLM → TTS puede tardar 1,5–4 s en hardware corriente y requiere otra llamada al modelo después de una herramienta. Son medidas del proyecto, no un benchmark independiente.
+
+**Conclusión:** el modo local mejora control de datos y reduce dependencia de una API, pero no es automáticamente más rápido ni ofrece todas las funciones de una sesión Live. M.I.L.O. debe mostrar el modo activo, destino de datos, latencia esperada y capacidades que se pierden al cambiar de motor.
+
+## 13. Vulnerabilidad histórica descrita por el propio proyecto
+
+El README de Mark LVI describe que una versión previa de `open_app` aceptaba una entrada como parte de un comando de shell y podía interpretarse como inyección de comandos. El autor indica que se corrigió eliminando la ruta de lanzamiento basada en shell.
+
+Esto no prueba que la versión actual mantenga el defecto; sí demuestra por qué las herramientas deben tratar cada argumento como dato, no como fragmento de comando. En M.I.L.O. evitar `shell=True` con entradas del usuario, usar listas de argumentos, validar ejecutables contra un registro permitido y añadir pruebas de seguridad para caracteres de shell.
+
+## 14. Pruebas pendientes antes de considerar una capacidad fiable
+
+- Audio: abrir, cerrar, cambiar y desconectar micrófono; activar/desactivar wake word; recuperación después de error.
+- Herramientas: parámetros inválidos, timeout, excepción, permisos denegados y verificación de efecto real.
+- Memoria: guardar, recuperar, corregir, borrar, reiniciar, corromper el JSON y exceder límites.
+- Confirmación: rechazar, cancelar, dejar expirar y comprobar que el modelo no puede confirmar por sí mismo.
+- Deshacer: cambios externos posteriores, archivo movido o eliminado fuera del asistente y reinicio de aplicación.
+- Navegador: pestañas múltiples, login caducado, contenido con instrucciones maliciosas y navegación a dominios no permitidos.
+- Visión: pantalla equivocada, varios monitores, permiso denegado y captura desactualizada.
+- Proveedores: cuota, 401, 429, 5xx, timeout, JSON inválido, cambio de modelo y conexión local caída.
+- Instalación: Windows/macOS/Linux limpios, Python soportado y dependencias opcionales ausentes.
+
+No se han ejecutado estas pruebas; son el plan de validación recomendado.
