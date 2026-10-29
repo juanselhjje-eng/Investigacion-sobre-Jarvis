@@ -109,3 +109,18 @@ Otra discusión sobre ordenadores para agentes resalta un problema de diseño: d
 Fuente: https://www.reddit.com/r/LocalLLaMA/comments/1up6swc/opencomputer_an_open_source_computer_built_for/
 
 Estas discusiones son opiniones y experiencias de participantes, no pruebas controladas. Se incluyen como señales para formular pruebas, no como conclusiones universales.
+
+## Incidencias recientes de OpenJarvis que amplían la muestra
+
+En la página de issues revisada el 29 de octubre de 2026 aparecen reportes/peticiones recientes como:
+- **Memoria desactualizada:** la memoria automática no reemplaza datos antiguos correctamente (#1189).
+- **Audio y permisos en macOS:** el botón de micrófono no hace nada por falta de la declaración/entitlement de entrada de audio (#1156).
+- **Dependencias de voz:** sincronización de la app de escritorio elimina dependencias como faster-whisper y sounddevice (#1161).
+- **Herramientas de memoria:** el servidor no entrega backend a las herramientas de memoria (#1147).
+- **Carga de herramientas MCP:** la configuración de servidores MCP por archivo no se aplica en algunos flujos (#1140).
+- **Eliminación de trazas:** se reporta que la eliminación de trazas deja tokens indexados y afecta la búsqueda (#1137).
+- **Configuración del prompt:** un reporte indica que config.agent.system_prompt no afecta al agente esperado (#1128).
+
+Fuente directa: https://github.com/open-jarvis/OpenJarvis/issues
+
+Todos los anteriores son reportes individuales que requieren revisar conversación, commit y estado actual. No deben presentarse como defectos vigentes confirmados sin ese seguimiento.
