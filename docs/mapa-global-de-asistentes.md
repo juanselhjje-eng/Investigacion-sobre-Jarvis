@@ -69,3 +69,25 @@ Fuentes de descubrimiento:
 - https://github.com/topics/jarvis-ai
 - https://github.com/topics/jarvis-assistant
 - https://github.com/topics/jarvis
+
+
+## Asistentes con mayor visibilidad pública: comparación inicial
+
+| Proyecto | Forma de uso y propuesta pública | Diferencia frente a los prototipos clásicos | Lo que no se debe asumir |
+|---|---|---|---|
+| [OpenClaw](https://github.com/openclaw/openclaw) | Gateway autoalojado que conecta agentes con WhatsApp, Telegram, Discord, Slack, Signal y otras superficies; sesiones, automatización, plugins y varios agentes | Lleva el asistente a canales que el usuario ya utiliza y ofrece instalación guiada, documentación y un ecosistema ampliable | No significa que sea seguro para conceder acceso ilimitado; revisar controles, configuración y riesgos antes de habilitar permisos |
+| [Hermes Agent](https://github.com/NousResearch/hermes-agent) | Agente con memoria persistente, navegador, voz, tareas programadas, subagentes, herramientas y conectores de mensajería | Combina capacidades en una plataforma de uso continuo y admite diferentes proveedores y formas de integración | La lista de funciones no demuestra que todas funcionen igual de bien en todos los sistemas |
+| [Goose](https://github.com/aaif-goose/goose) | Agente general con app de escritorio, CLI, API, múltiples proveedores y extensiones MCP | Prioriza flujos de trabajo prácticos, instalación multiplataforma e integraciones extensibles | Extensiones y permisos amplían la superficie de riesgo; revisar sandbox y controles |
+| [Jan](https://github.com/janhq/jan) | App de escritorio con modelos locales o en la nube, API local e integraciones; ofrece funciones de agente en preview | Reduce la barrera para probar modelos locales mediante una aplicación de escritorio | Funciones preview no equivalen a un agente de escritorio plenamente autónomo |
+| [OpenJarvis](https://github.com/open-jarvis/OpenJarvis) | Framework local-first con motores intercambiables, agentes, memoria, herramientas y evaluación | Se enfoca en arquitectura, ejecución local y medición de eficiencia | El framework requiere configuración técnica; las métricas necesitan metodología y reproducción |
+
+Fuentes oficiales:
+- OpenClaw: https://docs.openclaw.ai/
+- Hermes: https://hermes-agent.nousresearch.com/docs/user-guide/features/overview
+- Goose: https://github.com/aaif-goose/goose/
+- Jan: https://docs.jan.ai/desktop
+- OpenJarvis: https://github.com/open-jarvis/OpenJarvis
+
+## Por qué estos ejemplos son relevantes
+
+Una diferencia que aparece en los proyectos de mayor visibilidad no es solamente que tengan más funciones. Es que conectan el agente con canales y herramientas ya usadas, cuentan con guías de instalación, presentan un propósito concreto y permiten ampliar integraciones. Estas características son explicaciones plausibles de adopción, no una demostración causal de por qué cada proyecto ganó popularidad.
