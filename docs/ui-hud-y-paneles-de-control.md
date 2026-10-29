@@ -134,3 +134,24 @@ La interfaz no debe ejecutar comandos del sistema directamente por concatenació
 - Goose docs: https://goose-docs.ai/
 
 Esta fase define patrones y controles; no constituye un inventario completo de cada HUD publicado en YouTube o GitHub. Para completar la investigación visual hace falta una galería de proyectos concretos, capturas, código, licencias, accesibilidad y pruebas en varias resoluciones.
+
+
+## 9. Ventajas, desventajas y mejor interfaz para un menor de edad
+
+| Interfaz | Ventajas | Desventajas | Balance para un menor |
+|---|---|---|---|
+| Chat normal | Fácil de entender, deja revisar y corregir texto, permite aprender paso a paso | Puede ocultar qué herramientas se están ejecutando; una respuesta segura en el tono puede ser incorrecta | Mejor punto de partida para aprender y probar; añadir citas, avisos de incertidumbre y botones de revisar antes de actuar |
+| Push-to-talk | El micrófono solo se activa cuando se pulsa; fácil de detener y entender | Menos cómodo con las manos ocupadas; puede fallar por ruido | Preferible al micrófono siempre activo durante las primeras pruebas, por control y privacidad |
+| Wake word | Cómodo y rápido, manos libres | El micrófono puede permanecer escuchando; activaciones falsas y mayor complejidad | Activarlo solo si hace falta, con indicador visible, opción física o rápida para apagarlo y procesamiento local cuando sea posible |
+| HUD flotante | Acceso rápido y muestra estados sin cambiar de ventana | Puede distraer, tapar contenido o dificultar la accesibilidad | Opcional, discreto y fácil de ocultar; nunca debe ser la única forma de cancelar una acción o revisar permisos |
+| Orb/animación futurista | Da identidad visual y puede representar estados | Puede crear una falsa impresión de inteligencia o actividad real | Solo decoración secundaria; priorizar etiquetas claras como “escuchando”, “ejecutando” y “error” |
+| Mission Control | Muestra tareas, pasos, errores, agentes y aprobaciones | Más complejo; puede exponer datos sensibles en registros | Útil cuando se aprenda a automatizar, siempre con historial limitado, secretos ocultos y cancelación visible |
+| Panel de memoria | Permite corregir y borrar datos recordados | Si el borrado no alcanza índices y copias, puede dejar rastros | Recomendado si hay memoria persistente; guardar lo mínimo, mostrar la fuente y facilitar el borrado real |
+| App de escritorio | Integra ventanas, atajos y funciones del PC | Puede requerir permisos amplios y tener más superficie de ataque | Usar solo proyectos mantenidos y conocidos, con permisos mínimos y sin ejecutar comandos arbitrarios por defecto |
+| Web UI local | Sencilla de desarrollar y probar desde el navegador | Si el backend de control queda expuesto, otra persona o página podría intentar usarlo | Aceptable para aprender si escucha solo en localhost, exige autenticación y no se expone a la red sin necesidad |
+
+### Recomendación práctica
+
+Para empezar, la mejor combinación suele ser **chat claro + botón para hablar + panel de tareas sencillo + confirmación antes de acciones externas**. Añadir HUD futurista después, no antes. Mostrar siempre qué se está enviando a un proveedor remoto, cuándo se activa el micrófono y cómo cancelar. Evitar guardar grabaciones, capturas o conversaciones completas si no son necesarias.
+
+La guía de UNICEF para IA centrada en la infancia recomienda diseño adecuado a la edad, transparencia, privacidad por defecto y controles reales para niños y adolescentes: https://www.unicef.org/innocenti/reports/policy-guidance-ai-children
