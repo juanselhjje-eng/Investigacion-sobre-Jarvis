@@ -20,6 +20,7 @@ La investigación anterior se centraba demasiado en dos creadores. Esa selecció
 - [Modelos gratuitos frente a pago y coste real](docs/modelos-gratuitos-vs-pago-coste-real.md)
 - [Investigación de UI, HUD y paneles de control](docs/ui-hud-y-paneles-de-control.md)
 - [Catálogo de herramientas y capacidades](docs/catalogo-herramientas-y-capacidades.md)
+- [Criterios de ventajas, desventajas y recomendación para menores](docs/criterios-ventajas-desventajas-menores.md)
 - [FatihMakes: serie MARK](docs/fatihmakes-mark-lvi.md)
 - [Evolución de MARK](docs/evolucion-serie-mark.md)
 - [Danny el Arquitecto: producto público y límites de verificación](docs/danny-el-arquitecto.md)
