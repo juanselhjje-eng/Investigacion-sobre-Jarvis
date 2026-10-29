@@ -39,18 +39,19 @@ Registrar ID, fecha, proyecto, URL, tipo de fuente, resumen fiel, estado (anunci
 
 | Área | Estado | Siguiente trabajo |
 |---|---|---|
-| Mapa de repositorios y familias | Inicial | Inventario priorizado y más proyectos por categoría |
+| Mapa de repositorios y familias | En ampliación | Añadidos OpenClaw, Hermes, Goose y Jan; seguir inventario por categoría |
 | Serie MARK | Parcial | Mantener como caso de estudio, no como representación total |
 | Producto de Danny el Arquitecto | Parcial | Documentar claims públicos sin inferir backend privado |
-| YouTube y tutoriales | Inicial | Revisar series completas y comentarios accesibles |
+| YouTube y tutoriales | Inicial | Hay un video registrado; revisar series completas y comentarios accesibles |
 | Instagram y otras redes | Inicial | Registrar solo publicaciones públicas accesibles |
 | Reddit y foros | Inicial | Clasificar quejas, soluciones y peticiones |
 | Preguntas frecuentes | Inicial | FAQ de instalación, voz, modelos, memoria, coste y seguridad |
-| Errores de instalación | Inicial | Agrupar dependencias, SO, audio, APIs y permisos |
+| Errores de instalación | Parcial | Añadidos issues recientes de OpenJarvis; ampliar con versiones y soluciones |
 | Seguridad y privacidad | Inicial | Revisar permisos, datos enviados, claves e inyección |
 | Benchmarks y pruebas prácticas | Pendiente | Definir pruebas reproducibles |
-| Comparativa global | Pendiente | Esperar una muestra representativa |
-| Progreso y vacíos | En curso | Actualizar por categorías cubiertas |
+| Comparativa global | Inicial | Comparar asistentes visibles y prototipos; falta muestreo amplio y pruebas |
+| Por qué algunos proyectos no se vuelven famosos | Inicial | Síntesis de encuestas, documentación y casos de éxito; falta estudio longitudinal por proyecto |
+| Progreso y vacíos | En curso | Actualizar por categorías cubiertas; no dar porcentaje mundial sin denominador defendible |
 
 ## Porcentaje
 
@@ -82,3 +83,12 @@ El porcentaje se calculará a partir de una matriz publicada, con pesos por cate
 - https://www.youtube.com/watch?v=qw16ascMH4Y
 - https://www.dannyelarquitecto.com/jarvis
 - https://dannyelarquitecto.com/mission-control/
+
+
+## Registro de esta actualización — 29 de octubre de 2026
+
+- Se incorporó un análisis de barreras de adopción con fuentes de Pew Research Center, YouGov, ICO, GitHub y un snapshot de agentes open source.
+- Se distinguió entre popularidad en GitHub y usuarios activos.
+- Se amplió el mapa con OpenClaw, Hermes Agent, Goose y Jan.
+- Se registraron issues de OpenJarvis como ejemplos recientes, manteniendo la etiqueta de reportes individuales.
+- La cobertura mundial sigue sin porcentaje: el conjunto examinado aún no es una muestra estadística representativa y no se han reproducido las funciones en hardware real.
