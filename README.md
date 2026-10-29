@@ -1,40 +1,43 @@
-# Investigación técnica para construir M.I.L.O.
+# Investigación mundial de asistentes tipo JARVIS
 
-Investigación viva sobre asistentes digitales que pueden conversar, percibir información del equipo y ejecutar tareas: la serie MARK de FatihMakes y el JARVIS de Danny el Arquitecto.
+Investigación comparativa y continuamente ampliable de asistentes personales de IA: proyectos open source, demostraciones, tutoriales, productos comerciales, sistemas locales, agentes de escritorio, automatización, voz, visión, memoria, hogares inteligentes y agentes multi-paso.
 
-## Estado de la investigación
+**Alcance:** estudiar lo que existe públicamente en internet, cómo está construido, qué promete, qué funciona según evidencia disponible, qué falla, qué pide la comunidad y qué límites persisten. No se afirmará que se revisó literalmente todo internet: cada fase documentará plataformas, consultas, fecha de revisión, muestras examinadas y vacíos de acceso.
 
-**Progreso estimado de la fase inicial: 80% — todavía no alcanza el umbral del 80%.**
+## Estado
 
-Este porcentaje es una estimación de cobertura del plan de investigación, no una medida científica. Ya se revisaron la documentación pública de Mark LVI, el núcleo, cargadores de acciones/plugins, memoria, confirmación, deshacer, proveedores, automatización de navegador, visión, archivos, mensajería y dependencias, reportes públicos de usuarios y las páginas públicas del producto JARVIS de Danny. La cobertura documental pública ha alcanzado aproximadamente el 80% del plan definido. No equivale a una auditoría de ejecución: faltan pruebas reproducibles en un equipo real, revisión completa de vídeos, y acceso al backend/código interno de Danny, que no se ha verificado como público.
+La investigación anterior se centraba demasiado en dos creadores. Esa selección pasa a ser solo una pequeña línea de estudio dentro de un mapa mucho más amplio. Las cifras de progreso se recalcularán según una matriz global de categorías y fuentes; no se reutiliza el porcentaje anterior como si midiera la cobertura mundial.
 
-## Documentos
+## Índice
 
-- [Plan, alcance y método de verificación](docs/plan-de-investigacion.md)
-- [FatihMakes: Mark LVI, arquitectura, funciones y errores reportados](docs/fatihmakes-mark-lvi.md)
-- [Evolución de Mark X a Mark LVI](docs/evolucion-serie-mark.md)
-- [Danny el Arquitecto: producto JARVIS, Mission Control y límites de la evidencia](docs/danny-el-arquitecto.md)
-- [Diseño propuesto para M.I.L.O.](docs/arquitectura-propuesta-milo.md)
-- [Comparativa y prioridades de implementación](docs/comparativa-y-prioridades.md)
+- [Plan y método global](docs/plan-de-investigacion.md)
+- [Mapa global de proyectos](docs/mapa-global-de-asistentes.md)
+- [Errores, límites, preguntas frecuentes y comunidad](docs/fallos-faq-y-comunidad.md)
+- [FatihMakes: serie MARK](docs/fatihmakes-mark-lvi.md)
+- [Evolución de MARK](docs/evolucion-serie-mark.md)
+- [Danny el Arquitecto: producto público y límites de verificación](docs/danny-el-arquitecto.md)
+- [Comparativa técnica global](docs/comparativa-y-prioridades.md)
 
-## Regla de evidencia
+## Evidencia
 
-Cada afirmación importante debe clasificarse como:
-- **Verificado en código/documentación:** aparece en una fuente primaria consultada.
-- **Reportado por usuarios:** aparece en una incidencia pública; no demuestra que le ocurra a todos.
-- **Afirmación del creador:** se anuncia en una web o README, pero no se ha probado independientemente.
-- **Inferencia/recomendación:** conclusión técnica propuesta para M.I.L.O.
+- **Código/documentación comprobada:** visible en fuente primaria.
+- **Reporte de usuario:** una persona lo reportó; no prueba que afecte a todos.
+- **Demostración o afirmación del creador:** publicado en vídeo, web o README sin verificación independiente.
+- **Reproducido:** probado con pasos y resultado guardados.
+- **Inferencia:** conclusión técnica, identificada como tal.
+- **No verificable:** falta acceso a código, cuenta, equipo, vídeo completo o backend.
 
-## Fuentes principales
+## Fuentes iniciales
 
-- FatihMakes, Mark LVI: https://github.com/FatihMakes/Mark-LVI
-- Código principal: https://github.com/FatihMakes/Mark-LVI/blob/main/main.py
-- Instalador: https://github.com/FatihMakes/Mark-LVI/blob/main/setup.py
-- Incidencias Mark LVI: https://github.com/FatihMakes/Mark-LVI/issues
-- JARVIS de Danny: https://www.dannyelarquitecto.com/jarvis
-- Mission Control: https://dannyelarquitecto.com/mission-control/
-- Avisos legales y privacidad: https://www.dannyelarquitecto.com/legal
+- https://github.com/topics/jarvis-ai
+- https://github.com/topics/jarvis-assistant
+- https://github.com/open-jarvis/OpenJarvis
+- https://github.com/leon-ai/leon
+- https://github.com/OpenVoiceOS/ovos-core
+- https://github.com/FatihMakes
+- https://www.dannyelarquitecto.com/jarvis
+- https://www.youtube.com/watch?v=qw16ascMH4Y
 
-## Próximo criterio de avance
+Un nombre comercial no garantiza una arquitectura común. Un video editado no equivale a una prueba reproducible. Un issue abierto no es necesariamente un defecto confirmado. La investigación no copiará código incompatible con sus licencias ni publicará secretos.
 
-No se marcará el 80% hasta cubrir, como mínimo: arquitectura, entrada/salida de voz, modelos y proveedores, memoria, percepción visual, control del sistema, navegación web, plugins, planificación multi-paso, interfaz, persistencia, privacidad, seguridad, instalación, dependencias, errores de usuarios, licencia y sugerencias de la comunidad; además, se revisarán las fuentes primarias disponibles de ambos proyectos y se señalarán explícitamente las áreas que no puedan verificarse.
+Cada proyecto se registrará con URL, fecha, versión, licencia, SO, instalación, modelos, voz, visión, herramientas, memoria, planificación, permisos, conectores, pruebas, errores, solicitudes, coste, privacidad y límites. Las redes con contenido privado o inaccesible se marcarán como no revisadas.
