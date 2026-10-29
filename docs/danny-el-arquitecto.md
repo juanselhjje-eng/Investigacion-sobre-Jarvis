@@ -100,3 +100,44 @@ No es correcto declarar que son defectos sin acceder al código; son preguntas d
 - Mission Control: https://dannyelarquitecto.com/mission-control/
 - Avisos legales: https://www.dannyelarquitecto.com/legal
 - Página principal del creador: https://dannyelarquitecto.com/
+
+
+## 7. Observaciones concretas de la interfaz pública de Mission Control
+
+La página pública presenta varios módulos, entre ellos JARVIS Core, Comunicaciones, Observatorio, Laboratorio y Motores, además de salas de estrategia, investigación, contenido, automatización y analítica. También presenta paneles para agentes, tareas, alertas, bitácora y contenido.
+
+La misma página aclara explícitamente que algunas partes siguen en preparación:
+- La bandeja que clasificaría mensajes de redes sociales todavía no está conectada a las cuentas; la página dice que no mostrará mensajes inventados mientras no esté conectada.
+- La zona de contenido describe una primera fase local/demo para convertir una idea en hook, caption, carrusel o story sin API externa.
+- La sección para gestionar llaves y consumo de modelos aparece como pendiente de preparación.
+
+Estas notas son relevantes porque muestran que el producto combina módulos disponibles con otros que se están preparando. No se debe asumir que toda sección visible equivale a una integración terminada. Algunos valores de telemetría y estados que aparecen en la interfaz son elementos de la presentación; sin acceso a la instrumentación interna no se puede confirmar que midan recursos o tareas reales.
+
+Fuente: https://dannyelarquitecto.com/mission-control/
+
+## 8. Arquitectura probable a alto nivel, sin atribuir detalles internos
+
+A partir de las páginas públicas solo se puede proponer un mapa conceptual, no confirmar la implementación:
+
+1. **Cliente web:** interfaz de conversación, voz, ajustes y Mission Control.
+2. **Proveedores de IA:** la página legal menciona Gemini y Groq, con BYOK en determinadas rutas.
+3. **Memoria y sincronización:** las páginas de producto anuncian memoria entre sesiones y dispositivos; el aviso legal menciona Supabase para el formulario de interés de El Método, no demuestra por sí solo que toda la memoria de JARVIS use exactamente el mismo esquema.
+4. **Mission Control:** interfaz para salas, tareas, agentes y aprobaciones; la guía dice que las decisiones clave quedan bajo supervisión del usuario.
+5. **Servicios de voz y contenido:** la política legal enumera proveedores y usos específicos; hay que distinguir qué datos recibe cada proveedor.
+
+No se debe convertir este mapa conceptual en una afirmación sobre frameworks, colas, bases de datos, workers o arquitectura del servidor, porque el código fuente interno no ha sido auditado.
+
+## 9. Lista de comprobación para una auditoría independiente de Danny
+
+- [ ] Probar conversación de texto y voz en una cuenta de prueba sin comprar planes.
+- [ ] Determinar si la voz es streaming o síntesis posterior y medir latencia con una metodología repetible.
+- [ ] Comprobar qué ocurre al cerrar la pestaña durante una tarea.
+- [ ] Crear una tarea y comprobar si el progreso refleja pasos reales y resultados guardados.
+- [ ] Revisar si las aprobaciones bloquean realmente la ejecución de la acción.
+- [ ] Inspeccionar en el navegador el almacenamiento local de la llave BYOK y confirmar que no se envía en rutas no necesarias.
+- [ ] Revisar tráfico de red para identificar qué contenido se envía a cada proveedor, sin registrar claves ni datos privados.
+- [ ] Verificar qué memoria se sincroniza, cómo se borra y cómo se exporta.
+- [ ] Confirmar que las integraciones de redes sociales están conectadas antes de confiar en la bandeja.
+- [ ] Identificar qué módulos son demo, están en preparación o dependen de una suscripción.
+
+Esta lista no se ha ejecutado. No se han creado cuentas ni realizado compras como parte de la investigación.
