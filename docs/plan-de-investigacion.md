@@ -1,59 +1,84 @@
-# Plan de investigación y porcentaje de cobertura
+# Plan de investigación global: asistentes tipo JARVIS
 
-Fecha de corte inicial: 29 de octubre de 2026.
+Fecha de corte de esta fase: 29 de octubre de 2026.
 
-## Qué significa el porcentaje
+## Objetivo
 
-El porcentaje representa qué parte de una lista de áreas técnicas está documentada con fuentes, no qué tan cerca está M.I.L.O. de ser un asistente perfecto. Una función anunciada no equivale a una función probada. Se mantendrá separado el nivel de documentación del nivel de verificación práctica.
+Crear un mapa amplio y basado en evidencia de asistentes personales de IA que se presentan como Jarvis o cumplen una función similar, en proyectos open source, productos comerciales, tutoriales, videos, comunidades técnicas y redes sociales públicas. Documentar capacidades, arquitectura, límites, preguntas frecuentes, errores, solicitudes de mejora, seguridad, privacidad, costes y diferencias entre demostración y funcionamiento comprobado.
 
-## Matriz de cobertura inicial
+No existe una forma realista de revisar literalmente cada publicación de internet. La investigación debe ser amplia, rastreable y explícita sobre muestras y vacíos; nunca se presentará como una revisión universal completa.
 
-| Área | Estado inicial | Evidencia o trabajo pendiente |
+## Categorías de fuentes
+
+1. Repositorios: código, README, licencias, releases, commits, tests, issues, pull requests y discusiones.
+2. Videos y tutoriales: YouTube y otras plataformas con contenido público accesible; separar demostración, explicación de código, comentarios y seguimiento de versiones.
+3. Redes sociales: publicaciones públicas, respuestas, comentarios accesibles y solicitudes repetidas. No asumir acceso a contenido privado.
+4. Comunidades: foros técnicos, Reddit, discusiones de proveedores y reportes de instalación.
+5. Productos comerciales: web oficial, documentación, precios, privacidad y límites declarados.
+6. Investigación técnica: artículos, benchmarks, documentación de modelos, audio en tiempo real, agentes, memoria, herramientas y seguridad.
+
+## Taxonomía técnica
+
+- Entrada: palabra de activación, pulsar para hablar, micrófono continuo, texto, atajos, cámara, capturas, OCR y eventos del sistema.
+- Voz: VAD, STT, TTS, streaming, interrupción, latencia, idioma, ruido y selección de dispositivo.
+- Cerebro: modelo local o API, enrutamiento, fallback, contexto, límites, coste y degradación.
+- Herramientas: navegador, aplicaciones, archivos, terminal, correo, calendario, mensajería, sistema operativo, domótica, APIs y conectores.
+- Memoria: sesión, persistente, semántica/vectorial, episódica, preferencias, corrección, olvido, sincronización y recuperación.
+- Agentes: planificación, subagentes, colas, tareas programadas, ejecución larga, reintentos, cancelación y recuperación tras reinicio.
+- Visión: pantalla, múltiples monitores, ventanas, cámara, OCR, coordenadas y validación del efecto.
+- Interfaz: HUD, bandeja, overlay, historial, estado de tareas, registros, permisos, diagnóstico y accesibilidad.
+- Seguridad: prompt injection, contenido web no confiable, shell, permisos, confirmaciones, secretos, plugins, sandbox y borrado.
+- Operación: instalación, dependencias, actualizaciones, consumo, red, disponibilidad, costes, compatibilidad y desinstalación.
+- Experiencia real: éxito verificado, errores silenciosos, recuperación, confianza y control humano.
+
+## Registro de cada hallazgo
+
+Registrar ID, fecha, proyecto, URL, tipo de fuente, resumen fiel, estado (anunciado, visible en código, reportado, reproducido, resuelto, pendiente o no verificable), versión, SO, pasos de reproducción, impacto, solución sugerida, estado de solución, confianza y límites de la evidencia.
+
+## Matriz de cobertura
+
+| Área | Estado | Siguiente trabajo |
 |---|---|---|
-| Funciones anunciadas de Mark LVI | Parcial | README primario consultado; falta comprobar módulos |
-| Arquitectura del proceso principal | Parcial | Imports, sesión Gemini, audio, acciones y memoria visibles en main.py |
-| Entrada y salida de audio | Parcial | Código y reportes de micrófono; falta prueba local |
-| Memoria persistente | Parcial | README describe memoria local y búsqueda; falta auditar almacenamiento y recuperación |
-| Control del sistema operativo | Parcial | Capacidades anunciadas; falta auditar cada acción |
-| Visión y capturas de pantalla/cámara | Parcial | Capacidades anunciadas; falta revisar permisos y módulo completo |
-| Plugins y acciones | Parcial | Cargadores auto-descubiertos descritos en main.py; falta revisar contratos |
-| Confirmación y deshacer | Parcial | Se anuncian; módulos disponibles para auditoría posterior |
-| Seguridad e inyección de instrucciones | Parcial | README afirma frontera de contenido no confiable; falta verificar implementación |
-| Proveedores locales y externos | Parcial | README y setup consultados; falta revisar adaptadores |
-| Instalación y dependencias | Parcial | setup.py revisado; falta requirements completo y pruebas por SO |
-| Incidencias de usuarios | Parcial | Consultadas varias issues recientes y antiguas |
-| Ideas y solicitudes de la comunidad | Parcial | Revisadas algunas incidencias y propuestas |
-| Versiones antiguas de FatihMakes | Pendiente | Comparar Mark-X, Mark-X.1, Mark-XXXIX-OR y otras versiones |
-| Producto de Danny el Arquitecto | Parcial | Web, Mission Control y legal consultados |
-| Código fuente de Danny | No verificado | No se localizó en esta pasada un repositorio fuente oficial público; no asumir que el producto web y sus demostraciones prueban todas las funciones |
-| Pruebas reales reproducibles | Pendiente | No se ha ejecutado el software en el equipo del usuario |
-| Comparación final y plan de implementación | Pendiente | Se elaborará tras completar la auditoría |
+| Mapa de repositorios y familias | Inicial | Inventario priorizado y más proyectos por categoría |
+| Serie MARK | Parcial | Mantener como caso de estudio, no como representación total |
+| Producto de Danny el Arquitecto | Parcial | Documentar claims públicos sin inferir backend privado |
+| YouTube y tutoriales | Inicial | Revisar series completas y comentarios accesibles |
+| Instagram y otras redes | Inicial | Registrar solo publicaciones públicas accesibles |
+| Reddit y foros | Inicial | Clasificar quejas, soluciones y peticiones |
+| Preguntas frecuentes | Inicial | FAQ de instalación, voz, modelos, memoria, coste y seguridad |
+| Errores de instalación | Inicial | Agrupar dependencias, SO, audio, APIs y permisos |
+| Seguridad y privacidad | Inicial | Revisar permisos, datos enviados, claves e inyección |
+| Benchmarks y pruebas prácticas | Pendiente | Definir pruebas reproducibles |
+| Comparativa global | Pendiente | Esperar una muestra representativa |
+| Progreso y vacíos | En curso | Actualizar por categorías cubiertas |
 
-**Estimación actual: 35%.** Se usa una cifra conservadora porque hay mucha información de marketing y README, pero aún no se ha inspeccionado cada módulo ni ejecutado las aplicaciones.
+## Porcentaje
 
-## Método
+El porcentaje se calculará a partir de una matriz publicada, con pesos por categoría y ejemplos de fuentes revisadas. Se distinguirá cobertura documental, diversidad de proyectos/plataformas, cobertura de problemas comunitarios y verificación práctica. No se afirmará un porcentaje de “todo internet”.
 
-1. Priorizar repositorios, código, documentación oficial, incidencias y páginas legales.
-2. Para cada capacidad, registrar fuente, qué dice exactamente, qué se puede inferir y qué falta probar.
-3. Separar errores observados en incidencias de defectos confirmados por reproducción.
-4. Proponer arreglos concretos con coste, riesgo y prioridad.
-5. No copiar código de forma que infrinja licencias. El objetivo es aprender patrones y construir una implementación propia compatible con las licencias de las dependencias.
-6. Mantener una lista de cambios con fecha y commit.
+## Preguntas centrales
 
-## Criterio del 80%
+1. ¿Qué proyectos se ejecutan y cuáles son prototipos o demos?
+2. ¿Qué parte usa APIs y qué parte funciona sin internet?
+3. ¿Cómo se verifica que una acción ocurrió?
+4. ¿Qué sucede si falla voz, modelo, red, memoria o herramienta?
+5. ¿Cómo se corrigen errores y recuerdos incorrectos?
+6. ¿Qué requiere aprobación humana?
+7. ¿Qué límites reporta la comunidad repetidamente?
+8. ¿Qué sugerencias se implementan realmente?
+9. ¿Cómo se comparan coste, latencia, privacidad, consumo y éxito?
+10. ¿Qué hace útil a un asistente más allá de una interfaz futurista?
 
-Se notificará al usuario cuando el documento alcance al menos 80% de las áreas definidas y exista cobertura de las dos líneas de investigación. Si el código de Danny no es público, el área de implementación interna se marcará como no verificable, no se inventará una arquitectura.
+## Fuentes iniciales
 
-## Fuentes consultadas en la fase inicial
-
+- https://github.com/topics/jarvis-ai
+- https://github.com/topics/jarvis-assistant
+- https://github.com/open-jarvis/OpenJarvis
+- https://github.com/leon-ai/leon
+- https://github.com/leon-ai/leon/issues
+- https://github.com/OpenVoiceOS/ovos-core/issues
 - https://github.com/FatihMakes/Mark-LVI
-- https://github.com/FatihMakes/Mark-LVI/blob/main/main.py
-- https://github.com/FatihMakes/Mark-LVI/blob/main/setup.py
-- https://github.com/FatihMakes/Mark-LVI/issues/160
-- https://github.com/FatihMakes/Mark-LVI/issues/162
-- https://github.com/FatihMakes/Mark-LVI/issues/154
-- https://github.com/FatihMakes/Mark-LVI/issues/159
-- https://github.com/FatihMakes/Mark-XXXIX-OR/issues/47
+- https://github.com/FatihMakes/Mark-LVI/issues
+- https://www.youtube.com/watch?v=qw16ascMH4Y
 - https://www.dannyelarquitecto.com/jarvis
 - https://dannyelarquitecto.com/mission-control/
-- https://www.dannyelarquitecto.com/legal
