@@ -39,7 +39,7 @@ Registrar ID, fecha, proyecto, URL, tipo de fuente, resumen fiel, estado (anunci
 
 | Área | Estado | Siguiente trabajo |
 |---|---|---|
-| Mapa de repositorios y familias | En ampliación | Añadidos OpenClaw, Hermes, Goose y Jan; seguir inventario por categoría |
+| Mapa de repositorios y familias | En ampliación | Añadidos OpenClaw, Hermes, Goose, Jan, Home Assistant Assist, OpenVoiceOS, Rhasspy y Willow; seguir inventario por categoría |
 | Serie MARK | Parcial | Mantener como caso de estudio, no como representación total |
 | Producto de Danny el Arquitecto | Parcial | Documentar claims públicos sin inferir backend privado |
 | YouTube y tutoriales | Inicial | Hay un video registrado; revisar series completas y comentarios accesibles |
@@ -47,7 +47,7 @@ Registrar ID, fecha, proyecto, URL, tipo de fuente, resumen fiel, estado (anunci
 | Reddit y foros | Inicial | Clasificar quejas, soluciones y peticiones |
 | Preguntas frecuentes | Inicial | FAQ de instalación, voz, modelos, memoria, coste y seguridad |
 | Errores de instalación | Parcial | Añadidos issues recientes de OpenJarvis; ampliar con versiones y soluciones |
-| Seguridad y privacidad | Ampliada documentalmente | Añadida auditoría de OpenClaw, Hermes, Goose y Jan; faltan pruebas prácticas y verificar el estado actual de cada issue |
+| Seguridad y privacidad | Ampliada documentalmente | Auditoría de OpenClaw, Hermes, Goose y Jan; faltan pruebas prácticas y verificar el estado actual de cada issue |
 | Benchmarks y pruebas prácticas | Pendiente | Se definió protocolo común de instalación, voz, memoria, herramientas, seguridad y resistencia; falta ejecutarlo en equipos controlados |
 | Comparativa global | Inicial | Comparar asistentes visibles y prototipos; falta muestreo amplio y pruebas |
 | Por qué algunos proyectos no se vuelven famosos | Inicial | Síntesis de encuestas, documentación y casos de éxito; falta estudio longitudinal por proyecto |
@@ -100,3 +100,12 @@ El porcentaje se calculará a partir de una matriz publicada, con pesos por cate
 - Se documentaron riesgos de prompt injection, límites efectivos de herramientas, aprobación de MCP, separación de perfiles y crecimiento de memoria en procesos largos.
 - Se incorporó un protocolo común de pruebas reproducibles; ninguna de estas pruebas se declara ejecutada en esta fase.
 - Los issues se tratan como reportes fechados y sujetos a cambios, no como prueba de fallos universales o necesariamente vigentes.
+
+
+## Registro de esta actualización — 29 de octubre de 2026 (tercera ampliación)
+
+- Se añadió [Asistentes de voz, domótica y local-first](asistentes-de-voz-domotica-y-local-first.md).
+- El mapa ahora separa agentes generales de escritorio, pipelines de voz/domótica y satélites de voz; no se evaluarán como si fueran el mismo producto.
+- Se incorporó Rhasspy como caso de ciclo de vida y mantenimiento, porque su repositorio principal figura archivado; se documentó también la transición declarada de Wyoming Satellite.
+- Se registraron los claims de rendimiento de Willow como afirmaciones del proyecto, no como resultados independientes.
+- No se ejecutaron instalaciones ni pruebas físicas de voz en esta fase.
