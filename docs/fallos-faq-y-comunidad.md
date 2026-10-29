@@ -96,3 +96,16 @@ Fuentes:
 4. Clasificar como pregunta, solicitud, error reproducible o reporte no confirmado.
 5. No inferir frecuencia a partir de un solo comentario.
 6. Registrar si el mantenedor confirmó la solución.
+
+
+## Evidencia adicional fuera de los repositorios de nombre Jarvis
+
+En una discusión de Reddit de junio de 2026 sobre agentes locales de programación, varios participantes describen un patrón práctico: los agentes ayudan con tareas acotadas, pero requieren revisar diferencias, ejecutar pruebas y corregir resultados; al darles demasiada libertad pueden modificar elementos no solicitados o producir cambios que parecen correctos pero están rotos. No es un estudio estadístico ni una muestra específica de todos los asistentes Jarvis, pero es una advertencia útil para cualquier agente que modifica el sistema o archivos.
+
+Fuente: https://www.reddit.com/r/LocalLLaMA/comments/1u6mmuu/local_coding_agents_are_good_now_but_only_if_you/
+
+Otra discusión sobre ordenadores para agentes resalta un problema de diseño: dar al agente control amplio del PC puede ayudar cuando fallan APIs o CLI, pero las acciones se vuelven difíciles de inspeccionar para la persona usuaria. La interfaz debe mostrar de forma comprensible qué intenta hacer el agente, con qué permisos y qué resultado observó.
+
+Fuente: https://www.reddit.com/r/LocalLLaMA/comments/1up6swc/opencomputer_an_open_source_computer_built_for/
+
+Estas discusiones son opiniones y experiencias de participantes, no pruebas controladas. Se incluyen como señales para formular pruebas, no como conclusiones universales.
