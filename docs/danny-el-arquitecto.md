@@ -58,12 +58,12 @@ No se encontró en esta pasada un repositorio de código fuente oficial público
 
 No es correcto declarar que son defectos sin acceder al código; son preguntas de auditoría.
 
-## 5. Errores, limitaciones y posibles soluciones para replicar la idea en M.I.L.O.
+## 5. Errores, limitaciones y posibles soluciones para replicar la idea en un asistente propio
 
 ### Riesgo: confundir interfaz con ejecución
 **Riesgo:** un tablero puede mostrar agentes, tareas y porcentajes sin demostrar que una tarea se completó correctamente.
 
-**Solución para M.I.L.O.:** cada tarea debe tener ID, objetivo, estado, pasos, herramienta invocada, resultado observado, artefactos generados, fecha, error y evidencia. El progreso debe calcularse desde pasos completados, no generarse libremente por el modelo.
+**Solución para un asistente propio:** cada tarea debe tener ID, objetivo, estado, pasos, herramienta invocada, resultado observado, artefactos generados, fecha, error y evidencia. El progreso debe calcularse desde pasos completados, no generarse libremente por el modelo.
 
 ### Riesgo: memoria poco transparente
 **Riesgo:** una “memoria profunda” no garantiza exactitud, eliminación completa ni que se recupere el dato correcto.
@@ -83,7 +83,7 @@ No es correcto declarar que son defectos sin acceder al código; son preguntas d
 ### Riesgo: dependencia de producto cerrado
 **Riesgo:** sin código o documentación interna suficiente, no se puede reproducir con precisión el sistema ni comprobar sus límites.
 
-**Solución:** implementar patrones observables y documentados, no intentar adivinar la implementación interna. Diseñar M.I.L.O. con interfaces propias y componentes intercambiables.
+**Solución:** implementar patrones observables y documentados, no intentar adivinar la implementación interna. Diseñar un asistente propio con interfaces propias y componentes intercambiables.
 
 ## 6. Qué investigar después
 
