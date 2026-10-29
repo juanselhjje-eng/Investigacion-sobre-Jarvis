@@ -74,7 +74,7 @@ El archivo `setup.py`:
 - Comprueba que exista `core/face_model.obj`.
 - Muestra notas específicas para herramientas nativas de cada sistema operativo.
 
-**Riesgo/limitación:** una dependencia nativa o un navegador puede instalarse de forma distinta según el sistema. El instalador tolera ciertos fallos para que la aplicación siga abriendo, lo que puede dejar funciones deshabilitadas si el usuario no lee los avisos. Recomendación para M.I.L.O.: al inicio, ejecutar un diagnóstico que muestre claramente qué módulos están listos, cuáles fallaron y qué pasos solucionan cada fallo.
+**Riesgo/limitación:** una dependencia nativa o un navegador puede instalarse de forma distinta según el sistema. El instalador tolera ciertos fallos para que la aplicación siga abriendo, lo que puede dejar funciones deshabilitadas si el usuario no lee los avisos. Recomendación para un asistente propio: al inicio, ejecutar un diagnóstico que muestre claramente qué módulos están listos, cuáles fallaron y qué pasos solucionan cada fallo.
 
 ## 5. Problemas reportados por usuarios
 
@@ -88,7 +88,7 @@ Estos son reportes públicos, no prueba de que el fallo ocurra a todos los usuar
 
 **Causas posibles, aún no confirmadas:** selección incorrecta de dispositivo, permisos, dispositivo ocupado, frecuencia de muestreo no soportada, backend PortAudio/driver o una excepción en tareas concurrentes que reinicia el ciclo.
 
-**Cómo investigarlo/arreglarlo en M.I.L.O.:**
+**Cómo investigarlo/arreglarlo en un asistente propio:**
 1. Enumerar dispositivos de audio con nombre, índice y frecuencias admitidas.
 2. Probar el micrófono con un flujo mínimo antes de iniciar el agente.
 3. Separar estado de escucha, reposo, reconexión y error en una máquina de estados explícita.
@@ -99,7 +99,7 @@ Estos son reportes públicos, no prueba de que el fallo ocurra a todos los usuar
 ### Pantallas múltiples
 - [Issue #154 — Multiple Monitor viewing](https://github.com/FatihMakes/Mark-LVI/issues/154): un usuario solicita que la visión pueda ver los otros monitores; indica que la versión que usa solo ve uno.
 
-**Mejora para M.I.L.O.:** enumerar monitores, permitir elegir pantalla y mostrar una vista previa de la captura; pedir permiso antes de enviar capturas a un proveedor remoto. No asumir que una captura de una pantalla representa todo el escritorio.
+**Mejora para un asistente propio:** enumerar monitores, permitir elegir pantalla y mostrar una vista previa de la captura; pedir permiso antes de enviar capturas a un proveedor remoto. No asumir que una captura de una pantalla representa todo el escritorio.
 
 ### Selección de modelo y dependencias
 - [Issue #146 — Can´t change model](https://github.com/FatihMakes/Mark-LVI/issues/146): reporte de que no se puede seleccionar el modelo desde el menú.
@@ -107,7 +107,7 @@ Estos son reportes públicos, no prueba de que el fallo ocurra a todos los usuar
 - [Issue #149 — Wake word setup failed](https://github.com/FatihMakes/Mark-LVI/issues/149): reporte de conflicto de dependencias al instalar el detector de palabra de activación.
 - [Issue #150 — download issue](https://github.com/FatihMakes/Mark-LVI/issues/150): reporte de descarga ZIP.
 
-**Mejoras para M.I.L.O.:** pruebas de configuración automatizadas, versión y entorno virtual documentados, instalación opcional por módulos, selector de modelos que valide el proveedor antes de guardar, y errores accionables que incluyan el comando exacto de reparación.
+**Mejoras para un asistente propio:** pruebas de configuración automatizadas, versión y entorno virtual documentados, instalación opcional por módulos, selector de modelos que valide el proveedor antes de guardar, y errores accionables que incluyan el comando exacto de reparación.
 
 ## 6. Solicitudes e ideas de la comunidad
 
@@ -148,7 +148,7 @@ Auditoría pendiente:
 - El término “autónomo” no implica que todas las tareas se ejecuten sin supervisión ni que siempre se completen.
 - No se han ejecutado pruebas independientes de las capacidades anunciadas en esta investigación.
 
-## 9. Qué tomar como patrón para M.I.L.O.
+## 9. Qué tomar como patrón para un asistente propio
 
 Prioridad alta:
 1. Separar núcleo conversacional, proveedores, herramientas, memoria y UI.
@@ -181,14 +181,14 @@ Prioridad media:
 
 - `core/action_loader.py` valida nombres de herramientas con una expresión regular, comprueba declaraciones y omite archivos con errores o colisiones para que una sola acción defectuosa no detenga todo el descubrimiento.
 - `core/plugin_loader.py` mantiene un registro de plugins válidos, lee el estado habilitado desde la configuración y admite declaraciones de comportamiento y programación para herramientas que pueden ejecutarse sin bloquear la conversación.
-- Riesgo pendiente: cargar módulos Python de una carpeta de plugins equivale a ejecutar código con los permisos del proceso. La validación del esquema no es aislamiento. Para M.I.L.O., instalar un plugin debe requerir revisión/permiso y, cuando sea posible, ejecutarse en un proceso restringido.
+- Riesgo pendiente: cargar módulos Python de una carpeta de plugins equivale a ejecutar código con los permisos del proceso. La validación del esquema no es aislamiento. Para un asistente propio, instalar un plugin debe requerir revisión/permiso y, cuando sea posible, ejecutarse en un proceso restringido.
 
 ### Confirmación y deshacer
 
 - `core/confirm.py` describe una puerta donde el botón de la interfaz, no el modelo, autoriza una acción irreversible. Si no hay interfaz, la acción se rechaza. La confirmación pendiente tiene un tiempo de expiración de 90 segundos.
 - `core/undo.py` mantiene una pila compartida con profundidad máxima de 10 operaciones y ejecuta la función inversa de la última acción registrada.
 - Límite observado en el código consultado: la pila de deshacer está en memoria del proceso; no es un historial persistente tras reiniciar. Además, una operación solo puede deshacerse si su handler registró correctamente una función inversa. No todas las acciones externas tienen reversión real.
-- Mejora para M.I.L.O.: persistir un registro de operaciones recuperables con estado, validación del estado actual y advertencia explícita cuando una acción no sea reversible. No prometer “deshacer” para envíos externos o cambios cuyo efecto no se pueda revertir.
+- Mejora para un asistente propio: persistir un registro de operaciones recuperables con estado, validación del estado actual y advertencia explícita cuando una acción no sea reversible. No prometer “deshacer” para envíos externos o cambios cuyo efecto no se pueda revertir.
 
 ### Memoria
 
@@ -200,13 +200,13 @@ Prioridad media:
 ### Enrutamiento de modelos
 
 - `core/gemini.py` centraliza llamadas auxiliares de modelo y explica problemas previos de falta de timeouts, modelo único y configuración duplicada. La idea es usar una lista ordenada de modelos y tiempos máximos para que una caída no bloquee una herramienta indefinidamente.
-- Mejora para M.I.L.O.: timeouts por tipo de tarea, reintentos limitados con backoff, clasificación de errores (cuota, autenticación, timeout, respuesta inválida), proveedor alternativo y registro de latencia/coste. Evitar repetir automáticamente acciones que no sean idempotentes.
+- Mejora para un asistente propio: timeouts por tipo de tarea, reintentos limitados con backoff, clasificación de errores (cuota, autenticación, timeout, respuesta inválida), proveedor alternativo y registro de latencia/coste. Evitar repetir automáticamente acciones que no sean idempotentes.
 
 ### Dependencias
 
 El `requirements.txt` incluye UI/audio, Gemini, solicitudes HTTP, Playwright, automatización de teclado/ratón, visión, utilidades de sistema, documentos, panel remoto y extras para plugins. También separa dependencias específicas de Windows mediante marcadores de plataforma.
 
-**Riesgo:** una lista extensa aumenta el tiempo de instalación y la superficie de ataque, y una dependencia opcional mal instalada puede dejar una capacidad inoperante. La estrategia de instalación opcional reduce descargas innecesarias, pero M.I.L.O. debería mantener un inventario de dependencias por función, fijar versiones reproducibles para releases y probar cada plataforma en CI.
+**Riesgo:** una lista extensa aumenta el tiempo de instalación y la superficie de ataque, y una dependencia opcional mal instalada puede dejar una capacidad inoperante. La estrategia de instalación opcional reduce descargas innecesarias, pero un asistente propio debería mantener un inventario de dependencias por función, fijar versiones reproducibles para releases y probar cada plataforma en CI.
 
 ### Licencia
 
@@ -219,7 +219,7 @@ El archivo `LICENSE` de Mark LVI indica Creative Commons Attribution-NonCommerci
 
 El módulo `actions/browser_control.py` declara automatización con Playwright y busca evitar que la herramienta se ofrezca si la dependencia no está instalada. Es importante porque una capacidad no disponible debe desaparecer del registro de herramientas o devolver un error claro, en lugar de fingir que se navegó.
 
-**Limitaciones que deben probarse:** sitios que cambian su estructura, autenticación multifactor, ventanas emergentes, sesiones caducadas, CAPTCHAs, descargas, formularios de pago y páginas con contenido malicioso. Para M.I.L.O., la navegación debe tener límites de dominio/acción y pedir confirmación antes de enviar, comprar, publicar o borrar.
+**Limitaciones que deben probarse:** sitios que cambian su estructura, autenticación multifactor, ventanas emergentes, sesiones caducadas, CAPTCHAs, descargas, formularios de pago y páginas con contenido malicioso. Para un asistente propio, la navegación debe tener límites de dominio/acción y pedir confirmación antes de enviar, comprar, publicar o borrar.
 
 ### Visión de pantalla y cámara
 
@@ -231,7 +231,7 @@ El módulo `actions/browser_control.py` declara automatización con Playwright y
 
 `actions/file_processor.py` anuncia operaciones para imágenes, PDF, DOCX, texto/Markdown, CSV/XLSX, JSON, código, audio, vídeo, ZIP y presentaciones. Es una superficie de riesgo amplia: leer, transformar o ejecutar código requiere controles distintos.
 
-Recomendaciones para M.I.L.O.:
+Recomendaciones para un asistente propio:
 - Separar lectura/análisis de escritura y ejecución.
 - Crear copias temporales y copias de seguridad antes de sobrescribir.
 - Validar extensiones y contenido real; limitar tamaño, profundidad de ZIP y rutas extraídas.
@@ -242,13 +242,13 @@ Recomendaciones para M.I.L.O.:
 
 Los módulos `actions/send_message.py`, `actions/computer_control.py` y `actions/computer_settings.py` implementan interacciones con teclado, portapapeles, aplicaciones y configuración del sistema. El código activa el modo de seguridad de PyAutoGUI en varios de esos caminos y utiliza mecanismos de confirmación y deshacer para algunas acciones.
 
-**Riesgo principal:** el foco puede cambiar entre la comprobación y la escritura; una acción destinada a una ventana puede acabar en otra aplicación. Para M.I.L.O., verificar título/identidad de ventana justo antes de escribir, mostrar el texto final antes de enviarlo y confirmar explícitamente mensajes externos.
+**Riesgo principal:** el foco puede cambiar entre la comprobación y la escritura; una acción destinada a una ventana puede acabar en otra aplicación. Para un asistente propio, verificar título/identidad de ventana justo antes de escribir, mostrar el texto final antes de enviarlo y confirmar explícitamente mensajes externos.
 
 ### Búsqueda y comportamiento proactivo
 
 `actions/web_search.py` documenta una alternativa de búsqueda cuando Gemini Grounding supera cuota, con un periodo de enfriamiento de 15 minutos. `actions/proactive.py` separa cuándo hablar del contenido que el modelo genera; por defecto, contempla 15 minutos de silencio mínimo y 20 minutos entre avisos proactivos.
 
-**Límites:** resultados de búsqueda pueden estar desactualizados o ser incorrectos; las alertas proactivas pueden resultar intrusivas si no hay controles. M.I.L.O. debe mostrar fuentes y fecha, permitir apagar proactividad por categoría y nunca enviar mensajes externos de forma proactiva sin autorización.
+**Límites:** resultados de búsqueda pueden estar desactualizados o ser incorrectos; las alertas proactivas pueden resultar intrusivas si no hay controles. un asistente propio debe mostrar fuentes y fecha, permitir apagar proactividad por categoría y nunca enviar mensajes externos de forma proactiva sin autorización.
 
 ### Proveedores intercambiables
 
@@ -256,13 +256,13 @@ Los módulos `actions/send_message.py`, `actions/computer_control.py` y `actions
 
 El propio código documenta una compensación importante: Gemini Live integra voz y turnos en una sola sesión y puede responder en torno a 0,3–0,6 s según las mediciones que declara el autor; una cadena STT → LLM → TTS puede tardar 1,5–4 s en hardware corriente y requiere otra llamada al modelo después de una herramienta. Son medidas del proyecto, no un benchmark independiente.
 
-**Conclusión:** el modo local mejora control de datos y reduce dependencia de una API, pero no es automáticamente más rápido ni ofrece todas las funciones de una sesión Live. M.I.L.O. debe mostrar el modo activo, destino de datos, latencia esperada y capacidades que se pierden al cambiar de motor.
+**Conclusión:** el modo local mejora control de datos y reduce dependencia de una API, pero no es automáticamente más rápido ni ofrece todas las funciones de una sesión Live. un asistente propio debe mostrar el modo activo, destino de datos, latencia esperada y capacidades que se pierden al cambiar de motor.
 
 ## 13. Vulnerabilidad histórica descrita por el propio proyecto
 
 El README de Mark LVI describe que una versión previa de `open_app` aceptaba una entrada como parte de un comando de shell y podía interpretarse como inyección de comandos. El autor indica que se corrigió eliminando la ruta de lanzamiento basada en shell.
 
-Esto no prueba que la versión actual mantenga el defecto; sí demuestra por qué las herramientas deben tratar cada argumento como dato, no como fragmento de comando. En M.I.L.O. evitar `shell=True` con entradas del usuario, usar listas de argumentos, validar ejecutables contra un registro permitido y añadir pruebas de seguridad para caracteres de shell.
+Esto no prueba que la versión actual mantenga el defecto; sí demuestra por qué las herramientas deben tratar cada argumento como dato, no como fragmento de comando. En un asistente propio evitar `shell=True` con entradas del usuario, usar listas de argumentos, validar ejecutables contra un registro permitido y añadir pruebas de seguridad para caracteres de shell.
 
 ## 14. Pruebas pendientes antes de considerar una capacidad fiable
 
