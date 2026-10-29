@@ -4,9 +4,9 @@ Investigación viva sobre asistentes digitales que pueden conversar, percibir in
 
 ## Estado de la investigación
 
-**Progreso estimado de la fase inicial: 70% — todavía no alcanza el umbral del 80%.**
+**Progreso estimado de la fase inicial: 80% — todavía no alcanza el umbral del 80%.**
 
-Este porcentaje es una estimación de cobertura del plan de investigación, no una medida científica. Ya se revisaron la documentación pública de Mark LVI, el núcleo, cargadores de acciones/plugins, memoria, confirmación, deshacer, proveedores, automatización de navegador, visión, archivos, mensajería y dependencias, reportes públicos de usuarios y las páginas públicas del producto JARVIS de Danny. Falta revisar sistemáticamente el resto de módulos, versiones anteriores, vídeos completos, licencia vigente de cada repositorio y verificar funciones ejecutándolas en un entorno controlado.
+Este porcentaje es una estimación de cobertura del plan de investigación, no una medida científica. Ya se revisaron la documentación pública de Mark LVI, el núcleo, cargadores de acciones/plugins, memoria, confirmación, deshacer, proveedores, automatización de navegador, visión, archivos, mensajería y dependencias, reportes públicos de usuarios y las páginas públicas del producto JARVIS de Danny. La cobertura documental pública ha alcanzado aproximadamente el 80% del plan definido. No equivale a una auditoría de ejecución: faltan pruebas reproducibles en un equipo real, revisión completa de vídeos, y acceso al backend/código interno de Danny, que no se ha verificado como público.
 
 ## Documentos
 
@@ -15,6 +15,7 @@ Este porcentaje es una estimación de cobertura del plan de investigación, no u
 - [Evolución de Mark X a Mark LVI](docs/evolucion-serie-mark.md)
 - [Danny el Arquitecto: producto JARVIS, Mission Control y límites de la evidencia](docs/danny-el-arquitecto.md)
 - [Diseño propuesto para M.I.L.O.](docs/arquitectura-propuesta-milo.md)
+- [Comparativa y prioridades de implementación](docs/comparativa-y-prioridades.md)
 
 ## Regla de evidencia
 
