@@ -109,3 +109,12 @@ El porcentaje se calculará a partir de una matriz publicada, con pesos por cate
 - Se incorporó Rhasspy como caso de ciclo de vida y mantenimiento, porque su repositorio principal figura archivado; se documentó también la transición declarada de Wyoming Satellite.
 - Se registraron los claims de rendimiento de Willow como afirmaciones del proyecto, no como resultados independientes.
 - No se ejecutaron instalaciones ni pruebas físicas de voz en esta fase.
+
+
+## Registro de esta actualización — 29 de octubre de 2026 (cuarta ampliación)
+
+- Se añadió [Modelos gratuitos frente a pago y coste real](modelos-gratuitos-vs-pago-coste-real.md), con fuentes oficiales de Google, OpenRouter, Ollama, OpenAI y Anthropic. Incluye cuotas, datos, requisitos locales, costes ocultos, cálculo de tokens y arquitecturas gratuitas/híbridas/de pago.
+- Se añadió [Investigación de UI, HUD y paneles de control](ui-hud-y-paneles-de-control.md), diferenciando chat, overlay, HUD, estado de voz, memoria visible y Mission Control; incluye consideraciones de Electron y Tauri.
+- Se añadió [Catálogo de herramientas y capacidades](catalogo-herramientas-y-capacidades.md), que organiza las capacidades por familia, requisitos, fallos y verificación de éxito.
+- Las cuotas y precios se registraron como instantánea documental, no como promesa de permanencia; se deben revisar antes de implementar.
+- No se ejecutaron benchmarks comparativos de modelos ni pruebas de interfaz; las recomendaciones se basan en documentación oficial y criterios técnicos.
