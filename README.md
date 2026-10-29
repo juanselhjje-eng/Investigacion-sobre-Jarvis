@@ -13,6 +13,7 @@ La investigación anterior se centraba demasiado en dos creadores. Esa selecció
 - [Plan y método global](docs/plan-de-investigacion.md)
 - [Mapa global de proyectos](docs/mapa-global-de-asistentes.md)
 - [YouTube, redes sociales y demostraciones públicas](docs/youtube-redes-y-demostraciones.md)
+- [Por qué la mayoría de los proyectos no se vuelven famosos](docs/por-que-no-se-vuelven-famosos.md)
 - [Errores, límites, preguntas frecuentes y comunidad](docs/fallos-faq-y-comunidad.md)
 - [FatihMakes: serie MARK](docs/fatihmakes-mark-lvi.md)
 - [Evolución de MARK](docs/evolucion-serie-mark.md)
