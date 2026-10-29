@@ -173,3 +173,41 @@ Prioridad media:
 - Núcleo: https://github.com/FatihMakes/Mark-LVI/blob/main/main.py
 - Instalación: https://github.com/FatihMakes/Mark-LVI/blob/main/setup.py
 - Issues: enlaces integrados en cada sección.
+
+
+## 11. Hallazgos adicionales del código
+
+### Cargador de acciones y plugins
+
+- `core/action_loader.py` valida nombres de herramientas con una expresión regular, comprueba declaraciones y omite archivos con errores o colisiones para que una sola acción defectuosa no detenga todo el descubrimiento.
+- `core/plugin_loader.py` mantiene un registro de plugins válidos, lee el estado habilitado desde la configuración y admite declaraciones de comportamiento y programación para herramientas que pueden ejecutarse sin bloquear la conversación.
+- Riesgo pendiente: cargar módulos Python de una carpeta de plugins equivale a ejecutar código con los permisos del proceso. La validación del esquema no es aislamiento. Para M.I.L.O., instalar un plugin debe requerir revisión/permiso y, cuando sea posible, ejecutarse en un proceso restringido.
+
+### Confirmación y deshacer
+
+- `core/confirm.py` describe una puerta donde el botón de la interfaz, no el modelo, autoriza una acción irreversible. Si no hay interfaz, la acción se rechaza. La confirmación pendiente tiene un tiempo de expiración de 90 segundos.
+- `core/undo.py` mantiene una pila compartida con profundidad máxima de 10 operaciones y ejecuta la función inversa de la última acción registrada.
+- Límite observado en el código consultado: la pila de deshacer está en memoria del proceso; no es un historial persistente tras reiniciar. Además, una operación solo puede deshacerse si su handler registró correctamente una función inversa. No todas las acciones externas tienen reversión real.
+- Mejora para M.I.L.O.: persistir un registro de operaciones recuperables con estado, validación del estado actual y advertencia explícita cuando una acción no sea reversible. No prometer “deshacer” para envíos externos o cambios cuyo efecto no se pueda revertir.
+
+### Memoria
+
+- `memory/memory_manager.py` guarda memoria a largo plazo en `memory/long_term.json`, con categorías como identidad, preferencias, proyectos, relaciones, deseos y notas.
+- El código consultado separa el límite de almacenamiento (200.000 caracteres) del bloque central que se coloca en el prompt (900 caracteres), con un índice adicional de 420 caracteres y un máximo de seis entradas por categoría en el bloque principal. Lo que no cabe debe recuperarse mediante una herramienta de búsqueda.
+- El límite real no es “recordar literalmente todo”: depende de guardar la información correcta y recuperarla cuando hace falta. Al exceder el límite de almacenamiento, el código elimina entradas antiguas; hay un mecanismo para avisar al usuario del recorte.
+- La memoria JSON local es sencilla, pero exige manejar corrupción del archivo, concurrencia, respaldos, migraciones y protección de datos. Los embeddings semánticos aparecen como propuesta de la comunidad en la issue #159, no como una capacidad que esta investigación haya confirmado en el código.
+
+### Enrutamiento de modelos
+
+- `core/gemini.py` centraliza llamadas auxiliares de modelo y explica problemas previos de falta de timeouts, modelo único y configuración duplicada. La idea es usar una lista ordenada de modelos y tiempos máximos para que una caída no bloquee una herramienta indefinidamente.
+- Mejora para M.I.L.O.: timeouts por tipo de tarea, reintentos limitados con backoff, clasificación de errores (cuota, autenticación, timeout, respuesta inválida), proveedor alternativo y registro de latencia/coste. Evitar repetir automáticamente acciones que no sean idempotentes.
+
+### Dependencias
+
+El `requirements.txt` incluye UI/audio, Gemini, solicitudes HTTP, Playwright, automatización de teclado/ratón, visión, utilidades de sistema, documentos, panel remoto y extras para plugins. También separa dependencias específicas de Windows mediante marcadores de plataforma.
+
+**Riesgo:** una lista extensa aumenta el tiempo de instalación y la superficie de ataque, y una dependencia opcional mal instalada puede dejar una capacidad inoperante. La estrategia de instalación opcional reduce descargas innecesarias, pero M.I.L.O. debería mantener un inventario de dependencias por función, fijar versiones reproducibles para releases y probar cada plataforma en CI.
+
+### Licencia
+
+El archivo `LICENSE` de Mark LVI indica Creative Commons Attribution-NonCommercial 4.0 International (CC BY-NC 4.0), copyright 2026 FatihMakes, y declara que el uso comercial no está permitido bajo esa licencia. Antes de incorporar código o distribuir un derivado hay que revisar el texto íntegro, atribuir correctamente y solicitar permiso/licencia comercial si corresponde. Que el repositorio sea público no significa que el código sea de dominio público.
