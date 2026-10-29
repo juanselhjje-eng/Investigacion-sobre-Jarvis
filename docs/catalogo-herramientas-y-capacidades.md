@@ -138,3 +138,38 @@ Ejemplo: “envía correo” solo se considera verificado si se prueba con una c
 ## Límites
 
 Este catálogo clasifica capacidades posibles y controles de diseño; no significa que todos los asistentes citados implementen todas las familias de herramientas. La disponibilidad concreta debe verificarse por versión, configuración, licencia, sistema operativo y conectores habilitados.
+
+
+## 9. Ventajas, desventajas y prioridades para un menor de edad
+
+| Familia de herramientas | Ventajas | Desventajas o riesgos | Prioridad recomendada para aprender |
+|---|---|---|---|
+| Búsqueda web con fuentes | Enseña investigación y permite comprobar afirmaciones | Desinformación, páginas falsas, instrucciones maliciosas y fuentes desactualizadas | Alta: empezar por lectura, comparación de fuentes y citas verificables |
+| Lectura y resumen de archivos de prueba | Útil para estudiar, resumir y organizar | Puede subir archivos privados a servicios remotos o resumir mal | Alta: usar copias no sensibles, indicar si el archivo se procesa localmente o en la nube |
+| Creación de borradores | Ayuda a preparar textos, correos o tareas sin enviarlos | Puede inventar datos o producir contenido que el usuario no comprende | Alta: mantener en borrador y revisar antes de usar; para tareas escolares, usarlo para aprender y comprobar, no sustituir el trabajo propio |
+| Voz con botón | Interacción accesible y práctica | Transcripción errónea, audio enviado a la nube o activación accidental | Media-alta: push-to-talk, indicador de micrófono y sin grabación persistente por defecto |
+| Control visual de aplicaciones | Puede automatizar tareas sin API | Clic equivocado, foco de ventana incorrecto y fragilidad ante cambios de interfaz | Media: probar primero en aplicaciones y cuentas de ensayo, con pasos visibles y cancelación |
+| Automatización de navegador | Repite formularios y tareas web | Prompt injection, sesiones abiertas, formularios enviados por error y cambios de interfaz | Media-baja al principio: solo sitios conocidos y tareas reversibles; aprobación antes de enviar o publicar |
+| Sistema de archivos | Organiza y crea archivos de forma útil | Borrado o sobrescritura accidental, acceso a carpetas privadas | Media: limitar a una carpeta de pruebas, hacer copias y bloquear borrado permanente sin aprobación |
+| Terminal y ejecución de código | Muy útil para aprender programación y pruebas | Puede ejecutar órdenes destructivas, instalar malware o exponer secretos si tiene permisos excesivos | Baja para automatización autónoma inicial: usar un entorno aislado, lista de comandos permitidos y supervisión adulta cuando haya instalación o cambios del sistema |
+| Correo, mensajería y redes | Ahorra tiempo redactando y organizando comunicaciones | Puede enviar a la persona equivocada, filtrar datos o publicar sin querer | Solo borradores al principio; envío/publicación requiere confirmación que muestre destinatario, contenido y adjuntos |
+| Calendario y recordatorios | Organiza tareas y estudio | Horarios equivocados, invitaciones a terceros y datos personales en la nube | Media: empezar con recordatorios locales y revisar zona horaria y sincronización |
+| Memoria persistente | Evita repetir contexto y permite personalizar | Puede conservar datos sensibles, recordar algo incorrecto o no borrar todas las copias | Media: guardar solo preferencias no sensibles, con fuente, fecha, corrección y borrado accesible |
+| Base de datos | Enseña estructura, persistencia y aplicaciones reales | Exposición de credenciales, pérdida de datos y costes de hosting | Media para proyectos de aprendizaje: usar datos ficticios, copias de seguridad y credenciales limitadas |
+| MCP y conectores | Facilitan integrar herramientas de varios proveedores | Un servidor malicioso o con demasiados permisos puede acceder a datos o ejecutar acciones | Baja al principio: instalar solo conectores necesarios y conocidos, revisar permisos y probar con datos ficticios |
+| Subagentes | Permiten dividir una investigación grande | Multiplican coste, errores, accesos y dificultad de supervisión | Baja al principio: primero dominar un solo agente; después limitar tareas, permisos, presupuesto y contexto de cada subagente |
+| Tareas programadas | Automatizan rutinas y avisos | Acciones repetidas, procesos que siguen activos y notificaciones no deseadas | Media: recordatorios simples primero; tareas externas con límite de frecuencia y botón de apagado |
+| Domótica y dispositivos físicos | Aporta accesibilidad y automatización doméstica | Puede afectar seguridad del hogar o a otras personas | Baja sin supervisión: comenzar con simulaciones o luces de prueba; no permitir acciones de riesgo ni cambios que afecten a otros sin autorización |
+| Monitorización del PC | Ayuda a entender rendimiento y errores | Puede registrar actividad privada o exponer telemetría | Media: medir solo lo necesario y no recolectar contenido personal de otros usuarios del equipo |
+
+### Escala de riesgo recomendada
+
+- **Verde — lectura y práctica:** búsqueda, preguntas, resúmenes de material no sensible y archivos de prueba.
+- **Amarillo — revisión antes de usar:** editar archivos, automatizar el navegador, instalar dependencias, usar memoria persistente o conectores.
+- **Rojo — no dejar autónomo:** enviar mensajes, publicar, borrar datos, comprar, cambiar seguridad del sistema, ejecutar comandos privilegiados o controlar dispositivos que puedan afectar a personas. Requiere autorización y confirmación explícita; algunas acciones no deben habilitarse en absoluto.
+
+### Recomendación general
+
+Para un menor que está aprendiendo, el mejor orden es: **leer → proponer → crear borradores → actuar en un entorno de prueba → automatizar tareas reversibles → integrar cuentas reales solo cuando sea necesario**. No dar al agente acceso completo al PC, correo, contraseñas o archivos personales solo para que parezca más avanzado. La potencia debe crecer después de comprobar la fiabilidad, no antes.
+
+Referencia de protección infantil y privacidad: https://www.unicef.org/innocenti/reports/policy-guidance-ai-children
