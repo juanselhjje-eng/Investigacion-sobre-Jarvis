@@ -4,7 +4,7 @@ Investigación viva sobre asistentes digitales que pueden conversar, percibir in
 
 ## Estado de la investigación
 
-**Progreso estimado de la fase inicial: 60% — todavía no alcanza el umbral del 80%.**
+**Progreso estimado de la fase inicial: 70% — todavía no alcanza el umbral del 80%.**
 
 Este porcentaje es una estimación de cobertura del plan de investigación, no una medida científica. Ya se revisaron la documentación pública de Mark LVI, el núcleo, cargadores de acciones/plugins, memoria, confirmación, deshacer, proveedores, automatización de navegador, visión, archivos, mensajería y dependencias, reportes públicos de usuarios y las páginas públicas del producto JARVIS de Danny. Falta revisar sistemáticamente el resto de módulos, versiones anteriores, vídeos completos, licencia vigente de cada repositorio y verificar funciones ejecutándolas en un entorno controlado.
 
@@ -12,6 +12,7 @@ Este porcentaje es una estimación de cobertura del plan de investigación, no u
 
 - [Plan, alcance y método de verificación](docs/plan-de-investigacion.md)
 - [FatihMakes: Mark LVI, arquitectura, funciones y errores reportados](docs/fatihmakes-mark-lvi.md)
+- [Evolución de Mark X a Mark LVI](docs/evolucion-serie-mark.md)
 - [Danny el Arquitecto: producto JARVIS, Mission Control y límites de la evidencia](docs/danny-el-arquitecto.md)
 - [Diseño propuesto para M.I.L.O.](docs/arquitectura-propuesta-milo.md)
 
