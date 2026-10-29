@@ -47,8 +47,8 @@ Registrar ID, fecha, proyecto, URL, tipo de fuente, resumen fiel, estado (anunci
 | Reddit y foros | Inicial | Clasificar quejas, soluciones y peticiones |
 | Preguntas frecuentes | Inicial | FAQ de instalación, voz, modelos, memoria, coste y seguridad |
 | Errores de instalación | Parcial | Añadidos issues recientes de OpenJarvis; ampliar con versiones y soluciones |
-| Seguridad y privacidad | Inicial | Revisar permisos, datos enviados, claves e inyección |
-| Benchmarks y pruebas prácticas | Pendiente | Definir pruebas reproducibles |
+| Seguridad y privacidad | Ampliada documentalmente | Añadida auditoría de OpenClaw, Hermes, Goose y Jan; faltan pruebas prácticas y verificar el estado actual de cada issue |
+| Benchmarks y pruebas prácticas | Pendiente | Se definió protocolo común de instalación, voz, memoria, herramientas, seguridad y resistencia; falta ejecutarlo en equipos controlados |
 | Comparativa global | Inicial | Comparar asistentes visibles y prototipos; falta muestreo amplio y pruebas |
 | Por qué algunos proyectos no se vuelven famosos | Inicial | Síntesis de encuestas, documentación y casos de éxito; falta estudio longitudinal por proyecto |
 | Progreso y vacíos | En curso | Actualizar por categorías cubiertas; no dar porcentaje mundial sin denominador defendible |
@@ -92,3 +92,11 @@ El porcentaje se calculará a partir de una matriz publicada, con pesos por cate
 - Se amplió el mapa con OpenClaw, Hermes Agent, Goose y Jan.
 - Se registraron issues de OpenJarvis como ejemplos recientes, manteniendo la etiqueta de reportes individuales.
 - La cobertura mundial sigue sin porcentaje: el conjunto examinado aún no es una muestra estadística representativa y no se han reproducido las funciones en hardware real.
+
+
+## Registro de esta actualización — 29 de octubre de 2026 (segunda ampliación)
+
+- Se añadió [Auditoría profunda de seguridad y fiabilidad](auditoria-profunda-seguridad-fiabilidad.md), con documentación primaria de OpenClaw, Hermes Agent, Goose y Jan.
+- Se documentaron riesgos de prompt injection, límites efectivos de herramientas, aprobación de MCP, separación de perfiles y crecimiento de memoria en procesos largos.
+- Se incorporó un protocolo común de pruebas reproducibles; ninguna de estas pruebas se declara ejecutada en esta fase.
+- Los issues se tratan como reportes fechados y sujetos a cambios, no como prueba de fallos universales o necesariamente vigentes.
