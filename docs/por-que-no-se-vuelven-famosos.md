@@ -126,3 +126,31 @@ Si no hay telemetría pública, no se debe inventar el número de usuarios.
 La explicación más probable no es “la gente no quiere un Jarvis”. Es que **muchos proyectos ofrecen una visión atractiva antes de resolver por completo el problema de producto**: instalación simple, utilidad cotidiana, fiabilidad, seguridad, integración y soporte. La evidencia de asistentes digitales muestra que la mayoría de usos habituales son simples; los agentes con más autonomía tienen que demostrar una utilidad mayor y, a la vez, preservar el control de la persona.
 
 Esta es una síntesis razonada de fuentes públicas, no un resultado causal definitivo ni una encuesta mundial sobre todos los proyectos Jarvis.
+
+
+## Casos de contraste: proyectos que sí captaron atención
+
+No todos los asistentes de propósito general permanecen desconocidos. Un análisis de 18 agentes open source con datos del 22 de octubre de 2026 sitúa a OpenClaw, Hermes Agent, OpenCode, Browser Use, OpenHands, Cline, Goose, Aider, Nanobot y Jan entre los proyectos con atención notable. El informe calcula que OpenClaw y Hermes suman el 43 % de las estrellas de la muestra. Las estrellas miden atención, no usuarios activos, retención o calidad.
+
+Fuente: https://coworkosapp.com/research/open-source-ai-agents-2026/
+
+### Qué ofrecen los proyectos visibles
+
+- **OpenClaw:** un gateway autoalojado que conecta el asistente a mensajería que la gente ya usa, con configuración guiada, sesiones, canales, automatización y plugins. Fuentes: https://docs.openclaw.ai/ y https://docs.openclaw.ai/help/faq/what-is-openclaw
+- **Hermes Agent:** herramientas, memoria persistente, archivos de contexto, navegador, voz, tareas programadas, subagentes y múltiples integraciones. Fuente: https://hermes-agent.nousresearch.com/docs/user-guide/features/overview
+- **Goose:** aplicación de escritorio, CLI y API; múltiples proveedores y más de 70 extensiones MCP según su página pública. Fuente: https://github.com/aaif-goose/goose/
+- **Jan:** aplicación multiplataforma que permite probar modelos locales o conectarse a proveedores cloud desde una interfaz, sin exigir crear una aplicación propia. Fuente: https://docs.jan.ai/desktop
+
+### Patrones de producto que se pueden observar
+
+1. **Están donde ya ocurre el trabajo:** mensajería, escritorio, terminal, navegador y herramientas existentes.
+2. **Tienen una puerta de entrada clara:** instalador guiado, aplicación de escritorio o una instrucción de inicio relativamente directa.
+3. **Se pueden extender:** proveedores intercambiables, plugins, MCP, canales y herramientas.
+4. **Tienen un ecosistema visible:** documentación, releases, comunidad, incidencias y contribuciones.
+5. **Resuelven categorías concretas de trabajo:** no dependen únicamente de una demostración cinematográfica.
+
+Estos patrones son observaciones comparativas, no prueba de que por sí solos causen la popularidad. También hay que investigar distribución, fecha de lanzamiento, redes del creador, financiación, cobertura mediática y el efecto de recomendación de GitHub.
+
+## Una distinción importante
+
+“Famoso en GitHub” no es igual a “popular entre el público general”. Un proyecto puede acumular estrellas porque desarrolladores quieren probarlo, sin tener muchos usuarios que lo usen diariamente. Para medir adopción real se necesitan datos de instalaciones activas, retención, tareas completadas, soporte y encuestas; esos datos suelen no ser públicos.
