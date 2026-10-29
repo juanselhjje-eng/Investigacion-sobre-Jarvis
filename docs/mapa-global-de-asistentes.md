@@ -47,3 +47,25 @@ Un tutorial de septiembre de 2026 anuncia voz en tiempo real, memoria persistent
 ## Vacíos
 
 Aún no se inspeccionaron todos los repositorios del tema GitHub ni todos los videos y comentarios. Instagram y otras redes pueden restringir contenido. No se realizó una prueba práctica conjunta en hardware equivalente y no se infieren sistemas internos a partir de clips promocionales.
+
+
+## Nuevos candidatos añadidos en la segunda búsqueda
+
+| Proyecto | Enfoque declarado | Preguntas para la auditoría |
+|---|---|---|
+| [psycoks/Jarvis](https://github.com/psycoks/Jarvis) | Asistente Windows local-first, wake word y STT/TTS locales, memoria, navegador visible, visión mediante Gemini y registros de auditoría | Confirmar qué componentes son locales y qué contenido sale a Gemini; probar instalación, permisos y fiabilidad del navegador |
+| [RizN91/jarvis](https://github.com/RizN91/jarvis) | Asistente de voz/dictado para Windows con pulsar para hablar, datos locales y clave guardada en Credential Manager según su README | Medir consumo, revisar los límites del dictado y confirmar las afirmaciones de privacidad en el código |
+| [OpenJarvis](https://github.com/open-jarvis/OpenJarvis) | Framework local-first con motores intercambiables, agentes, herramientas y métricas | Revisar benchmarks, compatibilidad real, requisitos y issues de instalación |
+| [Leon](https://github.com/leon-ai/leon) | Asistente modular con herramientas, contexto, memoria y ejecución de agentes | Separar Developer Preview de la arquitectura legacy y clasificar issues por versión |
+| [JARVIS 3.0 (YouTube)](https://www.youtube.com/watch?v=qw16ascMH4Y) | Tutorial de voz, memoria, wake word y control del PC | Localizar y auditar el código que el video enlaza; comparar lo mostrado con el código disponible |
+
+Las capacidades de la tabla provienen de las descripciones públicas de cada proyecto; todavía no se consideran resultados de pruebas independientes.
+
+## Tamaño del ecosistema
+
+Las páginas de temas de GitHub mostraban alrededor de 212–213 repositorios con la etiqueta jarvis-ai en las búsquedas realizadas. El número cambia con el tiempo y los filtros; no representa todos los asistentes existentes, ni confirma que todos sean proyectos funcionales o mantenidos.
+
+Fuentes de descubrimiento:
+- https://github.com/topics/jarvis-ai
+- https://github.com/topics/jarvis-assistant
+- https://github.com/topics/jarvis
