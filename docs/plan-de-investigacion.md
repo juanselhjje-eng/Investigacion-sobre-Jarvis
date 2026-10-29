@@ -118,3 +118,11 @@ El porcentaje se calculará a partir de una matriz publicada, con pesos por cate
 - Se añadió [Catálogo de herramientas y capacidades](catalogo-herramientas-y-capacidades.md), que organiza las capacidades por familia, requisitos, fallos y verificación de éxito.
 - Las cuotas y precios se registraron como instantánea documental, no como promesa de permanencia; se deben revisar antes de implementar.
 - No se ejecutaron benchmarks comparativos de modelos ni pruebas de interfaz; las recomendaciones se basan en documentación oficial y criterios técnicos.
+
+
+## Registro de esta actualización — 29 de octubre de 2026 (criterios para menores)
+
+- Se estableció una regla transversal: cada alternativa debe incluir qué hace, ventajas, desventajas, coste total, privacidad, seguridad, facilidad, evidencia y recomendación específica para menores.
+- Se añadieron evaluaciones orientadas a principiantes y menores a los documentos de modelos, UI/HUD y herramientas.
+- La recomendación debe priorizar privacidad, permisos mínimos, control humano, coste predecible y aprendizaje; no se debe asumir que gratis, local o popular equivale automáticamente a seguro.
+- Se incorporaron fuentes de UNICEF, UNESCO y FTC; la referencia FTC/COPPA es estadounidense y no debe presentarse como ley colombiana.
