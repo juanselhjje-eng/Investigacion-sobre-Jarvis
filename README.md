@@ -20,6 +20,13 @@ La investigación anterior se centraba demasiado en dos creadores. Esa selecció
 - [Danny el Arquitecto: producto público y límites de verificación](docs/danny-el-arquitecto.md)
 - [Comparativa técnica global](docs/comparativa-y-prioridades.md)
 
+## Hallazgos nuevos de esta fase
+
+- Se añadieron OpenClaw, Hermes Agent, Goose y Jan al inventario global.
+- Se documentaron reportes recientes de OpenJarvis sobre memoria desactualizada, permisos de audio, dependencias de voz y herramientas.
+- Se creó un análisis con fuentes sobre las barreras de popularidad: valor poco claro, fiabilidad, instalación, privacidad, diferenciación, mantenimiento y distribución.
+- No se asigna un nuevo porcentaje global todavía: falta auditar una muestra más amplia de proyectos y redes, y no se han hecho pruebas reproducibles en máquinas limpias.
+
 ## Evidencia
 
 - **Código/documentación comprobada:** visible en fuente primaria.
