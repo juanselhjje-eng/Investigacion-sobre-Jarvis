@@ -203,3 +203,27 @@ El modelo más barato no es automáticamente el más económico si necesita cinc
 ## Límites
 
 No se hizo un benchmark común de calidad entre modelos. Los precios y cuotas se deben volver a revisar al implementar. El uso local no elimina coste eléctrico ni restricciones de licencia de cada modelo. La investigación no considera ningún proveedor “ilimitado” sin evidencia contractual.
+
+
+## 9. Ventajas, desventajas y recomendación para un menor de edad
+
+La recomendación de esta sección prioriza aprender sin gastos inesperados, proteger datos personales y poder detener o revisar el sistema. No es una afirmación de que una opción sea siempre superior.
+
+| Opción | Ventajas | Desventajas | Balance para un menor |
+|---|---|---|---|
+| Chat web gratuito | Fácil de empezar, no exige configurar un entorno, útil para estudiar y probar ideas | Límites variables; los datos se procesan según la política del proveedor; no equivale a una API para controlar el PC | Buena puerta de entrada para aprender si se respeta la edad mínima y se revisan los controles de privacidad; no introducir contraseñas, documentos privados ni datos familiares |
+| API gratuita | Permite aprender integración y construir prototipos sin pagar por cada llamada dentro de la cuota | Límites bajos o cambiantes, posibles restricciones de datos, errores por cuota y dependencia del proveedor | Adecuada para pruebas pequeñas con datos ficticios y supervisión de un adulto cuando haya cuentas, términos o claves de API |
+| Modelo local | Puede mantener las solicitudes en el equipo si no se conectan servicios remotos; no cobra por token | Necesita hardware, espacio, energía y configuración; puede responder peor o ser más lento | Buena opción educativa si el equipo la soporta y la instalación se hace desde fuentes fiables; no asumir que todos los modelos locales son seguros o exactos |
+| API de pago por uso | Más opciones de modelos, límites y rendimiento; permite medir el coste por tarea | Puede generar facturas por bucles, herramientas, contexto largo o subagentes; requiere proteger claves | No es la primera opción si no hay presupuesto propio autorizado; solo usar con permiso del adulto responsable, presupuesto duro y alertas de gasto |
+| Suscripción de chat | Coste mensual predecible para usar el producto dentro de sus límites | No suele incluir llamadas de API, hosting ni servicios externos; puede tener límites y requisitos de edad | Puede ser cómoda, pero solo si está permitida para la edad del usuario, se conoce el coste total y el adulto responsable acepta el gasto |
+| Arquitectura híbrida | Usa herramientas locales o gratuitas para tareas sencillas y reserva modelos más potentes para casos puntuales | Más difícil de configurar, depurar y controlar; puede enviar datos a varios proveedores | Mejor equilibrio a medio plazo para aprender desarrollo, siempre que el modo remoto se identifique claramente, no se activen gastos por defecto y las claves queden protegidas |
+
+### Recomendación práctica
+
+1. Empezar con un chat gratuito permitido para aprender conceptos y diseñar flujos sin datos personales.
+2. Construir un prototipo con tareas de lectura y borradores, usando archivos de prueba y modelos locales o cuotas gratuitas documentadas.
+3. Añadir una API de pago solo si una prueba demuestra que la opción gratuita/local no basta y existe autorización explícita para pagar.
+4. Configurar límites de gasto, límite de llamadas, tiempo máximo, cancelación y alertas antes de probar agentes autónomos.
+5. No usar cuentas prestadas ni intentar esquivar cuotas o límites de edad. Las cuotas gratuitas cambian y no deben ser una promesa de disponibilidad.
+
+Para menores, UNICEF recomienda privacidad por defecto, minimización de datos, transparencia y diseños adecuados a la edad. Fuente: https://www.unicef.org/innocenti/reports/policy-guidance-ai-children
